@@ -20,7 +20,6 @@ import java.io.Serializable;
 @Entity
 public class Mascota implements Serializable {
 
-    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -35,4 +34,104 @@ public class Mascota implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "mascota_id", referencedColumnName = "id")
     private Cita cita;
+
+    public Mascota() {
+    }
+
+    public Mascota(Long id, String nombre, String estadoSalud, String especie, String personalidad, String fichaMedica, String urlImagen, int edad, boolean disponible, Cita cita) {
+        this.id = id;
+        this.nombre = nombre;
+        this.estadoSalud = estadoSalud;
+        this.especie = especie;
+        this.personalidad = personalidad;
+        this.fichaMedica = fichaMedica;
+        this.urlImagen = urlImagen;
+        this.edad = edad;
+        this.disponible = disponible;
+        this.cita = cita;
+    }
+
+  
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getEstadoSalud() {
+        return estadoSalud;
+    }
+
+    public String getEspecie() {
+        return especie;
+    }
+
+    public String getPersonalidad() {
+        return personalidad;
+    }
+
+    public String getFichaMedica() {
+        return fichaMedica;
+    }
+
+    public String getUrlImagen() {
+        return urlImagen;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public Cita getCita() {
+        return cita;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setEstadoSalud(String estadoSalud) {
+        this.estadoSalud = estadoSalud;
+    }
+
+    public void setEspecie(String especie) {
+        this.especie = especie;
+    }
+
+    public void setPersonalidad(String personalidad) {
+        this.personalidad = personalidad;
+    }
+
+    public void setFichaMedica(String fichaMedica) {
+        this.fichaMedica = fichaMedica;
+    }
+
+    public void setUrlImagen(String urlImagen) {
+        this.urlImagen = urlImagen;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
+    public void setCita(Cita cita) {
+        this.cita = cita;
+    }
+    
+    
 }
