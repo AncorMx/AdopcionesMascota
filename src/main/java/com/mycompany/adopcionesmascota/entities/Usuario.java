@@ -30,9 +30,9 @@ public class Usuario implements Serializable {
     private String nombre;
     private String correo;
     private String razones;
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-    private Set<Mascota> listaMascotas;
-    private Long citaId;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "cita_id", referencedColumnName = "id")
+    private Cita citaId;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "solicitudAdopcion_id", referencedColumnName = "id")
     private SolicitudAdopcion solicitudAdopcion;
@@ -40,12 +40,11 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(Long id, String nombre, String correo, String razones, Set<Mascota> listaMascotas, Long citaId, SolicitudAdopcion solicitudAdopcion) {
+    public Usuario(Long id, String nombre, String correo, String razones, Cita citaId, SolicitudAdopcion solicitudAdopcion) {
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         this.razones = razones;
-        this.listaMascotas = listaMascotas;
         this.citaId = citaId;
         this.solicitudAdopcion = solicitudAdopcion;
     }
@@ -70,11 +69,7 @@ public class Usuario implements Serializable {
         return razones;
     }
 
-    public Set<Mascota> getListaMascotas() {
-        return listaMascotas;
-    }
-
-    public Long getCitaId() {
+    public Cita getCitaId() {
         return citaId;
     }
 
@@ -98,17 +93,14 @@ public class Usuario implements Serializable {
         this.razones = razones;
     }
 
-    public void setListaMascotas(Set<Mascota> listaMascotas) {
-        this.listaMascotas = listaMascotas;
-    }
-
-    public void setCitaId(Long citaId) {
+    public void setCitaId(Cita citaId) {
         this.citaId = citaId;
     }
 
     public void setSolicitudAdopcion(SolicitudAdopcion solicitudAdopcion) {
         this.solicitudAdopcion = solicitudAdopcion;
     }
-    
+
+   
     
 }
