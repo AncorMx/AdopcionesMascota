@@ -29,10 +29,10 @@ public class Cita implements Serializable {
     private LocalDateTime fechaHora;
     private SolicitudAdopcion solicitud;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "cita_id", referencedColumnName = "id")
+    @JoinColumn(name = "mascota_id", referencedColumnName = "id")
     private Mascota mascota;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "cita_id", referencedColumnName = "id")
+    @JoinColumn(name = "usuario_id", referencedColumnName = "id")
     private Usuario usuario;
 
     public Cita() {
