@@ -32,7 +32,7 @@ public class Mascota implements Serializable {
     private int edad;
     private boolean disponible;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "mascota_id", referencedColumnName = "id")
+    @JoinColumn(name = "cita_id", referencedColumnName = "id")
     private Cita cita;
 
     public Mascota() {
