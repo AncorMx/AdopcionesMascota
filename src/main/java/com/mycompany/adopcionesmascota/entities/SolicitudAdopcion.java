@@ -33,5 +33,60 @@ public class SolicitudAdopcion implements Serializable {
     private Mascota idMascota;
     private LocalDateTime fechaSolicitud;
     private String estado;
+
+    public SolicitudAdopcion() {
+    }
+
+    public SolicitudAdopcion(Long id, Usuario idUsuario, Mascota idMascota, LocalDateTime fechaSolicitud, String estado) {
+        this.id = id;
+        this.idUsuario = idUsuario;
+        this.idMascota = idMascota;
+        this.fechaSolicitud = fechaSolicitud;
+        this.estado = estado;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setIdUsuario(Usuario idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public void setIdMascota(Mascota idMascota) {
+        this.idMascota = idMascota;
+    }
+
+    public void setFechaSolicitud(LocalDateTime fechaSolicitud) {
+        this.fechaSolicitud = fechaSolicitud;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Usuario getIdUsuario() {
+        return idUsuario;
+    }
+
+    public Mascota getIdMascota() {
+        return idMascota;
+    }
+
+    public LocalDateTime getFechaSolicitud() {
+        return fechaSolicitud;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
     
 }
