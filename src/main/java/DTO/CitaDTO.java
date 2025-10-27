@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  * @author Josel
  */
 public class CitaDTO {
-
+    public Long id;
     public LocalDateTime fechaHora;
     public SolicitudAdopcionDTO solicitud;
     public MascotaDTO mascota;
@@ -20,13 +20,22 @@ public class CitaDTO {
     public CitaDTO() {
     }
 
-    public CitaDTO(LocalDateTime fechaHora, SolicitudAdopcionDTO solicitud, MascotaDTO mascota, UsuarioDTO usuario) {
+    public CitaDTO(Long id, LocalDateTime fechaHora, SolicitudAdopcionDTO solicitud, MascotaDTO mascota, UsuarioDTO usuario) {
+        this.id=id;
         this.fechaHora = fechaHora;
         this.solicitud = solicitud;
         this.mascota = mascota;
         this.usuario = usuario;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+    
     public LocalDateTime getFechaHora() {
         return fechaHora;
     }
