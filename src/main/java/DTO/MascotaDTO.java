@@ -13,16 +13,22 @@ import java.util.Objects;
 public class MascotaDTO {
     private Long id;
     private String nombre;
+    private String estadoSalud;
     private String especie;
-    private String raza;
+    private String personalidad;
+    private String fichaMedica;
+    private String urlImagen;
     private int edad;
     private boolean disponible;
 
-    public MascotaDTO(Long id, String nombre, String especie, String raza, int edad, boolean disponible) {
+    public MascotaDTO(Long id, String nombre, String estadoSalud, String especie, String personalidad, String fichaMedica, String urlImagen, int edad, boolean disponible) {
         this.id = id;
         this.nombre = nombre;
+        this.estadoSalud = estadoSalud;
         this.especie = especie;
-        this.raza = raza;
+        this.personalidad = personalidad;
+        this.fichaMedica = fichaMedica;
+        this.urlImagen = urlImagen;
         this.edad = edad;
         this.disponible = disponible;
     }
@@ -46,6 +52,14 @@ public class MascotaDTO {
         this.nombre = nombre;
     }
 
+    public String getEstadoSalud() {
+        return estadoSalud;
+    }
+
+    public void setEstadoSalud(String estadoSalud) {
+        this.estadoSalud = estadoSalud;
+    }
+
     public String getEspecie() {
         return especie;
     }
@@ -54,12 +68,28 @@ public class MascotaDTO {
         this.especie = especie;
     }
 
-    public String getRaza() {
-        return raza;
+    public String getPersonalidad() {
+        return personalidad;
     }
 
-    public void setRaza(String raza) {
-        this.raza = raza;
+    public void setPersonalidad(String personalidad) {
+        this.personalidad = personalidad;
+    }
+
+    public String getFichaMedica() {
+        return fichaMedica;
+    }
+
+    public void setFichaMedica(String fichaMedica) {
+        this.fichaMedica = fichaMedica;
+    }
+
+    public String getUrlImagen() {
+        return urlImagen;
+    }
+
+    public void setUrlImagen(String urlImagen) {
+        this.urlImagen = urlImagen;
     }
 
     public int getEdad() {
@@ -80,8 +110,8 @@ public class MascotaDTO {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 71 * hash + Objects.hashCode(this.id);
+        int hash = 3;
+        hash = 89 * hash + Objects.hashCode(this.id);
         return hash;
     }
 
@@ -102,7 +132,7 @@ public class MascotaDTO {
 
     @Override
     public String toString() {
-        return "MascotaDTO{" + "id=" + id + ", nombre=" + nombre + ", especie=" + especie + ", raza=" + raza + ", edad=" + edad + ", disponible=" + disponible + '}';
+        return "MascotaDTO{" + "id=" + id + ", nombre=" + nombre + ", estadoSalud=" + estadoSalud + ", especie=" + especie + ", personalidad=" + personalidad + ", fichaMedica=" + fichaMedica + ", urlImagen=" + urlImagen + ", edad=" + edad + ", disponible=" + disponible + '}';
     }
-    
+
 }
