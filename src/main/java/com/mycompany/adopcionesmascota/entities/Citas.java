@@ -4,8 +4,6 @@
  */
 package com.mycompany.adopcionesmascota.entities;
 
-import com.mycompany.adopcionesmascota.DTO.MascotaDTO;
-import com.mycompany.adopcionesmascota.DTO.UsuarioDTO;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
