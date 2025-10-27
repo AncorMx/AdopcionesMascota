@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 /**
  *
- * @author Josel
+ * @author Josel jeje
  */
 public class CitaDTO {
     private Long id;
