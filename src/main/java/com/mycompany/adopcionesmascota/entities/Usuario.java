@@ -31,7 +31,7 @@ public class Usuario implements Serializable {
     private String nombre;
     private String correo;
     private String razones;
-    @OneToMany()
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private Set<Mascota> listaMascotas;
     private Long citaId;
     @OneToOne(cascade = CascadeType.ALL)
