@@ -4,9 +4,7 @@
  */
 package com.mycompany.adopcionesmascota.entities;
 
-import com.mycompany.adopcionesmascota.DTO.MascotaDTO;
-import com.mycompany.adopcionesmascota.DTO.SolicitudAdopcionDTO;
-import com.mycompany.adopcionesmascota.DTO.UsuarioDTO;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,7 +27,7 @@ public class Cita implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private LocalDateTime fechaHora;
-    private SolicitudAdopcionDTO solicitud;
+    private SolicitudAdopcion solicitud;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cita_id", referencedColumnName = "id")
     private Mascota mascota;
@@ -40,7 +38,7 @@ public class Cita implements Serializable {
     public Cita() {
     }
 
-    public Cita(Long id, LocalDateTime fechaHora, SolicitudAdopcionDTO solicitud, Mascota mascota, Usuario usuario) {
+    public Cita(Long id, LocalDateTime fechaHora, SolicitudAdopcion solicitud, Mascota mascota, Usuario usuario) {
         this.id = id;
         this.fechaHora = fechaHora;
         this.solicitud = solicitud;
@@ -60,7 +58,7 @@ public class Cita implements Serializable {
         return fechaHora;
     }
 
-    public SolicitudAdopcionDTO getSolicitud() {
+    public SolicitudAdopcion getSolicitud() {
         return solicitud;
     }
 
@@ -80,7 +78,7 @@ public class Cita implements Serializable {
         this.fechaHora = fechaHora;
     }
 
-    public void setSolicitud(SolicitudAdopcionDTO solicitud) {
+    public void setSolicitud(SolicitudAdopcion solicitud) {
         this.solicitud = solicitud;
     }
 
