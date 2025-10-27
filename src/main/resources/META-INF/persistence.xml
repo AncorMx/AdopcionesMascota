@@ -3,9 +3,10 @@
   <persistence-unit name="AdopcionPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <class>com.mycompany.adopcionesmascota.entities.Cita</class>
-    <class>com.mycompany.adopcionesmascota.entities.Macota</class>
     <class>com.mycompany.adopcionesmascota.entities.Mascota</class>
     <class>com.mycompany.adopcionesmascota.entities.Usuario</class>
+    <class>com.mycompany.adopcionesmascota.entities.Citas</class>
+    <class>com.mycompany.adopcionesmascota.entities.SolicitudAdopcion</class>
     <properties>
       <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/AdopcionesVet"/>
       <property name="jakarta.persistence.jdbc.user" value="root"/>
