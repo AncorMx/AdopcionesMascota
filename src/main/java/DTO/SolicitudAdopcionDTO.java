@@ -1,0 +1,99 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package DTO;
+
+import java.time.LocalDateTime;
+import java.util.Objects;
+
+/**
+ *
+ * @author angel
+ */
+public class SolicitudAdopcionDTO {
+    private Long id;
+    private Long idUsuario;
+    private Long idMascota;
+    private LocalDateTime fechaSolicitud;
+    private String estado;
+
+    public SolicitudAdopcionDTO(Long id, Long idUsuario, Long idMascota, LocalDateTime fechaSolicitud, String estado) {
+        this.id = id;
+        this.idUsuario = idUsuario;
+        this.idMascota = idMascota;
+        this.fechaSolicitud = fechaSolicitud;
+        this.estado = estado;
+    }
+
+    public SolicitudAdopcionDTO() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(Long idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public Long getIdMascota() {
+        return idMascota;
+    }
+
+    public void setIdMascota(Long idMascota) {
+        this.idMascota = idMascota;
+    }
+
+    public LocalDateTime getFechaSolicitud() {
+        return fechaSolicitud;
+    }
+
+    public void setFechaSolicitud(LocalDateTime fechaSolicitud) {
+        this.fechaSolicitud = fechaSolicitud;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 29 * hash + Objects.hashCode(this.id);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final SolicitudAdopcionDTO other = (SolicitudAdopcionDTO) obj;
+        return Objects.equals(this.id, other.id);
+    }
+
+    @Override
+    public String toString() {
+        return "SolicitudAdopcionDTO{" + "id=" + id + ", idUsuario=" + idUsuario + ", idMascota=" + idMascota + ", fechaSolicitud=" + fechaSolicitud + ", estado=" + estado + '}';
+    }
+    
+}
