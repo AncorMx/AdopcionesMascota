@@ -4,11 +4,18 @@
  */
 package com.mycompany.adopcionesmascota.entities;
 
+import com.mycompany.adopcionesmascota.DTO.MascotaDTO;
+import com.mycompany.adopcionesmascota.DTO.SolicitudAdopcionDTO;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  *
@@ -21,38 +28,88 @@ public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String nombre;
+    private String correo;
+    private String razones;
+    @OneToMany()
+    private Set<Mascota> listaMascotas;
+    private Long citaId;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "solicitudAdopcion_id", referencedColumnName = "id")
+    private SolicitudAdopcion solicitudAdopcion;
+
+    public Usuario() {
+    }
+
+    public Usuario(Long id, String nombre, String correo, String razones, Set<Mascota> listaMascotas, Long citaId, SolicitudAdopcion solicitudAdopcion) {
+        this.id = id;
+        this.nombre = nombre;
+        this.correo = correo;
+        this.razones = razones;
+        this.listaMascotas = listaMascotas;
+        this.citaId = citaId;
+        this.solicitudAdopcion = solicitudAdopcion;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
     public Long getId() {
         return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public String getRazones() {
+        return razones;
+    }
+
+    public Set<Mascota> getListaMascotas() {
+        return listaMascotas;
+    }
+
+    public Long getCitaId() {
+        return citaId;
+    }
+
+    public SolicitudAdopcion getSolicitudAdopcion() {
+        return solicitudAdopcion;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Usuario)) {
-            return false;
-        }
-        Usuario other = (Usuario) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
-    @Override
-    public String toString() {
-        return "com.mycompany.adopcionesmascota.entities.Usuario[ id=" + id + " ]";
+    public void setRazones(String razones) {
+        this.razones = razones;
     }
+
+    public void setListaMascotas(Set<Mascota> listaMascotas) {
+        this.listaMascotas = listaMascotas;
+    }
+
+    public void setCitaId(Long citaId) {
+        this.citaId = citaId;
+    }
+
+    public void setSolicitudAdopcion(SolicitudAdopcion solicitudAdopcion) {
+        this.solicitudAdopcion = solicitudAdopcion;
+    }
+    
     
 }
