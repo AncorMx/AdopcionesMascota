@@ -17,7 +17,6 @@ public class UsuarioDTO {
     private String nombre;
     private String correo;
     private String razones;
-    private Set<MascotaDTO> listaMascotas;
     private Long citaId;
     private SolicitudAdopcionDTO solicitudAdopcionId;
 
@@ -26,7 +25,6 @@ public class UsuarioDTO {
         this.nombre = nombre;
         this.correo = correo;
         this.razones = razones;
-        this.listaMascotas = listaMascotas;
         this.citaId = citaId;
         this.solicitudAdopcionId = solicitudAdopcionId;
     }
@@ -64,14 +62,6 @@ public class UsuarioDTO {
 
     public void setRazones(String razones) {
         this.razones = razones;
-    }
-
-    public Set<MascotaDTO> getListaMascotas() {
-        return listaMascotas;
-    }
-
-    public void setListaMascotas(Set<MascotaDTO> listaMascotas) {
-        this.listaMascotas = listaMascotas;
     }
 
     public Long getCitaId() {
@@ -114,6 +104,6 @@ public class UsuarioDTO {
 
     @Override
     public String toString() {
-        return "UsuarioDTO{" + "id=" + id + ", nombre=" + nombre + ", correo=" + correo + ", razones=" + razones + ", listaMascotas=" + listaMascotas + ", citaId=" + citaId + ", solicitudAdopcionId=" + solicitudAdopcionId + '}';
+        return "UsuarioDTO{" + "id=" + id + ", nombre=" + nombre + ", correo=" + correo + ", razones=" + razones + ", citaId=" + citaId + ", solicitudAdopcionId=" + solicitudAdopcionId + '}';
     }
 }

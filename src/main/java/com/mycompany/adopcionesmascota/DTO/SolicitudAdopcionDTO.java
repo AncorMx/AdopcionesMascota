@@ -4,8 +4,6 @@
  */
 package com.mycompany.adopcionesmascota.DTO;
 
-import com.mycompany.adopcionesmascota.entities.*;
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 /**
@@ -14,17 +12,13 @@ import java.util.Objects;
  */
 public class SolicitudAdopcionDTO {
     private Long id;
-    private Usuario idUsuario;
-    private Mascota idMascota;
-    private LocalDateTime fechaSolicitud;
-    private String estado;
+    private String infoVivienda;
+    private String razonesAntecedentes;
 
-    public SolicitudAdopcionDTO(Long id, Usuario idUsuario, Mascota idMascota, LocalDateTime fechaSolicitud, String estado) {
+    public SolicitudAdopcionDTO(Long id, String infoVivienda, String razonesAntecedentes) {
         this.id = id;
-        this.idUsuario = idUsuario;
-        this.idMascota = idMascota;
-        this.fechaSolicitud = fechaSolicitud;
-        this.estado = estado;
+        this.infoVivienda = infoVivienda;
+        this.razonesAntecedentes = razonesAntecedentes;
     }
 
     public SolicitudAdopcionDTO() {
@@ -38,42 +32,26 @@ public class SolicitudAdopcionDTO {
         this.id = id;
     }
 
-    public Usuario getIdUsuario() {
-        return idUsuario;
+    public String getInfoVivienda() {
+        return infoVivienda;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setInfoVivienda(String infoVivienda) {
+        this.infoVivienda = infoVivienda;
     }
 
-    public Mascota getIdMascota() {
-        return idMascota;
+    public String getRazonesAntecedentes() {
+        return razonesAntecedentes;
     }
 
-    public void setIdMascota(Mascota idMascota) {
-        this.idMascota = idMascota;
-    }
-
-    public LocalDateTime getFechaSolicitud() {
-        return fechaSolicitud;
-    }
-
-    public void setFechaSolicitud(LocalDateTime fechaSolicitud) {
-        this.fechaSolicitud = fechaSolicitud;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setRazonesAntecedentes(String razonesAntecedentes) {
+        this.razonesAntecedentes = razonesAntecedentes;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.id);
+        hash = 79 * hash + Objects.hashCode(this.id);
         return hash;
     }
 
@@ -94,7 +72,6 @@ public class SolicitudAdopcionDTO {
 
     @Override
     public String toString() {
-        return "SolicitudAdopcionDTO{" + "id=" + id + ", idUsuario=" + idUsuario + ", idMascota=" + idMascota + ", fechaSolicitud=" + fechaSolicitud + ", estado=" + estado + '}';
+        return "SolicitudAdopcionDTO{" + "id=" + id + ", infoVivienda=" + infoVivienda + ", razonesAntecedentes=" + razonesAntecedentes + '}';
     }
-    
 }
