@@ -37,4 +37,59 @@ public class Cita implements Serializable {
     @JoinColumn(name = "cita_id", referencedColumnName = "id")
     private Usuario usuario;
 
+    public Cita() {
+    }
+
+    public Cita(Long id, LocalDateTime fechaHora, SolicitudAdopcionDTO solicitud, Mascota mascota, Usuario usuario) {
+        this.id = id;
+        this.fechaHora = fechaHora;
+        this.solicitud = solicitud;
+        this.mascota = mascota;
+        this.usuario = usuario;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public LocalDateTime getFechaHora() {
+        return fechaHora;
+    }
+
+    public SolicitudAdopcionDTO getSolicitud() {
+        return solicitud;
+    }
+
+    public Mascota getMascota() {
+        return mascota;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setFechaHora(LocalDateTime fechaHora) {
+        this.fechaHora = fechaHora;
+    }
+
+    public void setSolicitud(SolicitudAdopcionDTO solicitud) {
+        this.solicitud = solicitud;
+    }
+
+    public void setMascota(Mascota mascota) {
+        this.mascota = mascota;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
 }
