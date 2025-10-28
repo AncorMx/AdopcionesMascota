@@ -32,6 +32,8 @@ public class JPContacto extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 244, 225));
+
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel2.setText("Clinica la vida es bella");
 
@@ -45,7 +47,6 @@ public class JPContacto extends javax.swing.JPanel {
         jLabel4.setText("Contacto:");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\angel\\Desktop\\Instagram-Logo.png")); // NOI18N
         jLabel5.setText("@LaVidaEsBella");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -76,7 +77,7 @@ public class JPContacto extends javax.swing.JPanel {
                 .addComponent(jLabel4)
                 .addGap(33, 33, 33)
                 .addComponent(jLabel5)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

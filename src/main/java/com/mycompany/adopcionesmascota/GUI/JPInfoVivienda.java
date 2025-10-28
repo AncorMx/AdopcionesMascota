@@ -28,6 +28,8 @@ public class JPInfoVivienda extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 244, 225));
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel1.setText("MENU MOSTRAR ESPECIES ");
 
