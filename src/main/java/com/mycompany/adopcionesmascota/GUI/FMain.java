@@ -170,7 +170,7 @@ public class FMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_inicioActionPerformed
 
     private void btn_solicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_solicitudesActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btn_solicitudesActionPerformed
 
     private void btn_contactoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_contactoActionPerformed

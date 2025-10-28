@@ -47,6 +47,7 @@ public class JPContacto extends javax.swing.JPanel {
         jLabel4.setText("Contacto:");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Instagram-Logo.png"))); // NOI18N
         jLabel5.setText("@LaVidaEsBella");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -77,7 +78,7 @@ public class JPContacto extends javax.swing.JPanel {
                 .addComponent(jLabel4)
                 .addGap(33, 33, 33)
                 .addComponent(jLabel5)
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

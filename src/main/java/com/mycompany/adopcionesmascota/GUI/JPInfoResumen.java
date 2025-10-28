@@ -8,12 +8,12 @@ package com.mycompany.adopcionesmascota.GUI;
  *
  * @author angel
  */
-public class JPInfoRazones extends javax.swing.JPanel {
+public class JPInfoResumen extends javax.swing.JPanel {
 
     /**
      * Creates new form JPMenuMostrarEspecies
      */
-    public JPInfoRazones() {
+    public JPInfoResumen() {
         initComponents();
     }
 
@@ -47,7 +47,7 @@ public class JPInfoRazones extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Solicitud de Adopciones");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/3.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/4.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -75,7 +75,7 @@ public class JPInfoRazones extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
