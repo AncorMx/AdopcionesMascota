@@ -170,7 +170,24 @@ public class FMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_inicioActionPerformed
 
     private void btn_solicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_solicitudesActionPerformed
-        
+        String vista_solis = "Mostrar_Solis";
+
+        if (panelContenidoDinamico.getComponentCount() == 0 || !isViewAdded(vista_solis)) {
+
+            JPSolicitudes solicitudes = new JPSolicitudes();
+            panelContenidoDinamico.add(solicitudes, vista_solis);
+        }
+
+        cardLayout.show(panelContenidoDinamico, vista_solis);
+    }
+
+    private boolean verSolis(String vista_solis) {
+        for (java.awt.Component comp : panelContenidoDinamico.getComponents()) {
+            if (vista_solis.equals(comp.getName())) {
+                return true;
+            }
+        }
+        return false;
     }//GEN-LAST:event_btn_solicitudesActionPerformed
 
     private void btn_contactoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_contactoActionPerformed
