@@ -9,5 +9,8 @@ package com.mycompany.Control;
  * @author Josel
  */
 public class ControlNegocio {
+
+    public ControlNegocio() {
+    }
     
 }
