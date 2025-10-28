@@ -22,7 +22,6 @@ import java.time.LocalDateTime;
 @Entity
 public class Cita implements Serializable {
 
-    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -46,9 +45,7 @@ public class Cita implements Serializable {
         this.usuario = usuario;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
+   
 
     public Long getId() {
         return id;
