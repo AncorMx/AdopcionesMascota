@@ -21,6 +21,14 @@ public class FMain extends javax.swing.JFrame {
         initComponents();
         cardLayout = new CardLayout();
         panelContenidoDinamico.setLayout(cardLayout);
+        String vista_menu_inicial = "Mostrar_Menu";
+        JPMenuMostrarEspecies panelInicial = new JPMenuMostrarEspecies();
+
+        panelInicial.setName(vista_menu_inicial);
+
+        panelContenidoDinamico.add(panelInicial, vista_menu_inicial);
+
+        cardLayout.show(panelContenidoDinamico, vista_menu_inicial);
     }
 
     /**
