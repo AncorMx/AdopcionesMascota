@@ -6,6 +6,7 @@ package com.mycompany.adopcionesmascota.GUI;
 
 import com.mycompany.Control.ControlDiseño;
 import com.mycompany.Control.ControlDiseño.ViewNames;
+import com.mycompany.adopcionesmascota.entities.Mascota;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -28,30 +29,24 @@ public class FMain extends javax.swing.JFrame {
         cardLayout = new CardLayout();
         panelContenidoDinamico.setLayout(cardLayout);
 
-        // 1. Inicializa el ControlDiseño con las referencias del contenedor
         controlDiseño = new ControlDiseño(this, panelContenidoDinamico, cardLayout);
 
-        // 2. Llama al método simplificado del controlador para crear y registrar.
         registerAllPanels();
 
-        // 3. Muestra el panel inicial (Catálogo)
         controlDiseño.goToMainCatalog();
     }
 
     private void registerAllPanels() {
-        // La llamada a la fábrica del controlador elimina la necesidad de 'new JPMenuMostrarEspecies(controlDiseño)' aquí.
         controlDiseño.createAndRegisterPanel(ViewNames.CATALOGO, JPMenuMostrarEspecies.class);
         controlDiseño.createAndRegisterPanel(ViewNames.SOLICITUDES, JPSolicitudes.class);
         controlDiseño.createAndRegisterPanel(ViewNames.CONTACTO, JPContacto.class);
 
-        // Flujo de Solicitud (Pasos)
         controlDiseño.createAndRegisterPanel(ViewNames.INFO_MASCOTA, FInfoMascota.class);
         controlDiseño.createAndRegisterPanel(ViewNames.PASO_1_PERSONAL, JPInfoPersonal.class);
         controlDiseño.createAndRegisterPanel(ViewNames.PASO_2_VIVIENDA, JPInfoVivienda.class);
         controlDiseño.createAndRegisterPanel(ViewNames.PASO_3_RAZONES, JPInfoRazones.class);
         controlDiseño.createAndRegisterPanel(ViewNames.PASO_4_RESUMEN, JPInfoResumen.class);
 
-        // Paneles de Error
         controlDiseño.createAndRegisterPanel(ViewNames.ERROR_CITA, msg_ErrorCitaPend.class);
         controlDiseño.createAndRegisterPanel(ViewNames.ERROR_SOLICITUD, msg_ErrorSolicitud.class);
     }
@@ -177,7 +172,6 @@ public class FMain extends javax.swing.JFrame {
 
     private void btn_inicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicioActionPerformed
         controlDiseño.goToMainCatalog();
-
     }//GEN-LAST:event_btn_inicioActionPerformed
 
     private void btn_solicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_solicitudesActionPerformed
@@ -188,6 +182,18 @@ public class FMain extends javax.swing.JFrame {
         controlDiseño.goToContacto();
     }//GEN-LAST:event_btn_contactoActionPerformed
 
+    
+    public void mostrarDetalles(Mascota mascota) {
+    
+    FInfoMascota panelDetalles = new FInfoMascota(mascota);
+    
+    String nombreVista = "detalles_" + mascota.getId();
+    
+    panelContenidoDinamico.add(panelDetalles, nombreVista);
+    
+    cardLayout.show(panelContenidoDinamico, nombreVista);
+}
+   
     /**
      * @param args the command line arguments
      */
