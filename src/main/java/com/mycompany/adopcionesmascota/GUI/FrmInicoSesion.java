@@ -73,6 +73,11 @@ public class FrmInicoSesion extends javax.swing.JFrame {
 
         TfCorreo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         TfCorreo.setBorder(null);
+        TfCorreo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TfCorreoActionPerformed(evt);
+            }
+        });
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -203,6 +208,10 @@ public class FrmInicoSesion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void TfCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TfCorreoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TfCorreoActionPerformed
 
     /**
      * @param args the command line arguments
