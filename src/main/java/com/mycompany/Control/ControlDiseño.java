@@ -55,7 +55,7 @@ public class ControlDiseño {
      * CardLayout.
      */
     public void createAndRegisterPanel(String viewName, Class<? extends JPanel> panelType) {
-        if (dynamicPanelContainer.getLayout() instanceof CardLayout) {
+        if (dynamicPanelContainer != null && dynamicPanelContainer.getLayout() instanceof CardLayout) {
             try {
                 // Intenta encontrar el constructor que acepta ControlDiseño
                 JPanel newPanel;
@@ -70,6 +70,7 @@ public class ControlDiseño {
                 dynamicPanelContainer.add(newPanel, viewName);
             } catch (Exception e) {
                 System.err.println("Error al crear el panel para la vista " + viewName + ": " + e.getMessage());
+                e.printStackTrace();
             }
         }
     }
@@ -93,16 +94,16 @@ public class ControlDiseño {
     // ==========================================================
     // MÉTODOS PÚBLICOS DE NAVEGACIÓN
     // ==========================================================
-    // Transiciones entre JFrames
-    public void goToLogin(JFrame currentFrame) {
+    // Transiciones entre JFrames (Versión simplificada)
+    public void goToLogin() {
         cambiarPantalla(new FrmInicoSesion());
     }
 
-    public void goToRegistro(JFrame currentFrame) {
+    public void goToRegistro() {
         cambiarPantalla(new FrmRegistro());
     }
 
-    public void goToMain(JFrame currentFrame) {
+    public void goToMain() {
         cambiarPantalla(new FMain());
     }
 
@@ -115,12 +116,11 @@ public class ControlDiseño {
         showInternalPanel(ViewNames.SOLICITUDES);
     }
 
-    public void goToRegistro() {
-        cambiarPantalla(new FrmRegistro());
+    // *** MÉTODO AGREGADO PARA NAVEGAR A LA INFO DE MASCOTA ***
+    public void goToInfoMascota() {
+        showInternalPanel(ViewNames.INFO_MASCOTA);
     }
-    public void goToMain() {
-        cambiarPantalla(new FMain());
-    }
+    // *********************************************************
 
     public void goToContacto() {
         showInternalPanel(ViewNames.CONTACTO);
@@ -167,7 +167,7 @@ public class ControlDiseño {
                 showInternalPanel(ViewNames.PASO_1_PERSONAL);
                 break;
             case ViewNames.PASO_1_PERSONAL:
-                showInternalPanel(ViewNames.INFO_MASCOTA);
+                goToInfoMascota(); // Retorna a la pantalla de Info Mascota
                 break;
             default:
                 goToMainCatalog();

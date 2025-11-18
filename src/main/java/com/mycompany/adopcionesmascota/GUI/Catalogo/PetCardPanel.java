@@ -4,6 +4,7 @@
  */
 package com.mycompany.adopcionesmascota.GUI.Catalogo;
 
+import com.mycompany.Control.ControlDiseño;
 import com.mycompany.adopcionesmascota.GUI.FMain;
 import com.mycompany.adopcionesmascota.entities.Mascota;
 import javax.swing.ImageIcon;
@@ -15,11 +16,14 @@ import javax.swing.ImageIcon;
 public class PetCardPanel extends javax.swing.JPanel {
     private Mascota mascota;
     private FMain mainFrame;
+    ControlDiseño controlDiseño;
     /**
      * Creates new form PetCardPanel
      */
     public PetCardPanel() {
-        initComponents(); 
+        initComponents();
+        this.mascota = mascota;
+        this.controlDiseño = controlDiseño;
     }
 
     public PetCardPanel(Mascota mascota, FMain mainFrame) {
@@ -110,11 +114,12 @@ public class PetCardPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_infoMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_infoMascotaActionPerformed
-        lbNombreMascota.setText(mascota.getNombre());
-        
-        btn_infoMascota.addActionListener(e -> {
-            mainFrame.mostrarDetalles(mascota);
-        });
+       if (controlDiseño != null) {
+            // Delega la acción de navegación al controlador.
+            // La información de la mascota (this.mascota) debería ser
+            // manejada por el controlador o la siguiente vista.
+            controlDiseño.goToInfoMascota();
+        }
     }//GEN-LAST:event_btn_infoMascotaActionPerformed
 
 

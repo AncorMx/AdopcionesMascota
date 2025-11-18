@@ -4,17 +4,19 @@
  */
 package com.mycompany.adopcionesmascota.GUI;
 
+import com.mycompany.Control.ControlDiseño;
+
 /**
  *
  * @author angel
  */
 public class JPMenuMostrarEspecies extends javax.swing.JPanel {
 
-    /**
-     * Creates new form JPMenuMostrarEspecies
-     */
-    public JPMenuMostrarEspecies() {
+    private ControlDiseño controlDiseño;
+
+    public JPMenuMostrarEspecies(ControlDiseño controlDiseño) {
         initComponents();
+        this.controlDiseño=controlDiseño;
     }
 
     /**
@@ -248,15 +250,15 @@ public class JPMenuMostrarEspecies extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_infoMascota2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_infoMascota2ActionPerformed
-        // TODO add your handling code here:
+        controlDiseño.goToInfoMascota();
     }//GEN-LAST:event_btn_infoMascota2ActionPerformed
 
     private void btn_infoMascota1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_infoMascota1ActionPerformed
-        // TODO add your handling code here:
+        controlDiseño.goToInfoMascota(); // Delega a la función del controlador
     }//GEN-LAST:event_btn_infoMascota1ActionPerformed
 
     private void btn_infoMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_infoMascotaActionPerformed
-        // TODO add your handling code here:
+        controlDiseño.goToInfoMascota(); // Delega a la función del controlador
     }//GEN-LAST:event_btn_infoMascotaActionPerformed
 
 

@@ -182,7 +182,7 @@ public class FrmRegistro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegitrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegitrarActionPerformed
-        controlDiseño.goToLogin(this);
+        controlDiseño.goToLogin();
     }//GEN-LAST:event_btnRegitrarActionPerformed
 
     /**

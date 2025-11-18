@@ -4,6 +4,7 @@
  */
 package com.mycompany.adopcionesmascota.GUI;
 
+import com.mycompany.Control.ControlDiseño;
 import com.mycompany.adopcionesmascota.entities.Mascota;
 
 /**
@@ -12,10 +13,11 @@ import com.mycompany.adopcionesmascota.entities.Mascota;
  */
 public class FInfoMascota extends javax.swing.JPanel {
 
-    /**
-     * Creates new form JPMenuMostrarEspecies
-     */
+    ControlDiseño controlDiseño;
+
     public FInfoMascota(Mascota mascota) {
+
+        this.controlDiseño = controlDiseño;
         initComponents();
     }
 
