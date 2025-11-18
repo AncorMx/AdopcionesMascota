@@ -182,18 +182,17 @@ public class FMain extends javax.swing.JFrame {
         controlDiseño.goToContacto();
     }//GEN-LAST:event_btn_contactoActionPerformed
 
-    
     public void mostrarDetalles(Mascota mascota) {
-    
-    FInfoMascota panelDetalles = new FInfoMascota(mascota);
-    
-    String nombreVista = "detalles_" + mascota.getId();
-    
-    panelContenidoDinamico.add(panelDetalles, nombreVista);
-    
-    cardLayout.show(panelContenidoDinamico, nombreVista);
-}
-   
+
+        FInfoMascota panelDetalles = new FInfoMascota(mascota);
+
+        String nombreVista = "detalles_" + mascota.getId();
+
+        panelContenidoDinamico.add(panelDetalles, nombreVista);
+
+        cardLayout.show(panelContenidoDinamico, nombreVista);
+    }
+
     /**
      * @param args the command line arguments
      */

@@ -4,6 +4,8 @@
  */
 package com.mycompany.adopcionesmascota.GUI;
 
+import com.mycompany.adopcionesmascota.entities.Mascota;
+
 /**
  *
  * @author angel
@@ -13,7 +15,7 @@ public class FInfoMascota extends javax.swing.JPanel {
     /**
      * Creates new form JPMenuMostrarEspecies
      */
-    public FInfoMascota() {
+    public FInfoMascota(Mascota mascota) {
         initComponents();
     }
 
