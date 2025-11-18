@@ -29,6 +29,7 @@ public class Usuario implements Serializable {
     private String correo;
     private String razones;
     private String contraseña;
+    private String identificador;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cita_id", referencedColumnName = "id")
     private Cita citaId;
@@ -39,16 +40,25 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(Long id, String nombre, String correo, String razones, String contraseña, Cita citaId, SolicitudAdopcion solicitudAdopcion) {
+    public Usuario(Long id, String nombre, String correo, String razones, String contraseña, String identificador, Cita citaId, SolicitudAdopcion solicitudAdopcion) {
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         this.razones = razones;
         this.contraseña = contraseña;
+        this.identificador = identificador;
         this.citaId = citaId;
         this.solicitudAdopcion = solicitudAdopcion;
     }
 
+    public String getIdentificador() {
+        return identificador;
+    }
+
+    public void setIdentificador(String identificador) {
+        this.identificador = identificador;
+    }
+    
     public String getContraseña() {
         return contraseña;
     }

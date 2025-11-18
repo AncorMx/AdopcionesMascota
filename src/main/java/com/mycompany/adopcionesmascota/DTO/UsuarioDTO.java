@@ -18,22 +18,34 @@ public class UsuarioDTO {
     private String correo;
     private String contraseña;
     private String razones;
+    private String identificador;
     private Long citaId;
     private SolicitudAdopcionDTO solicitudAdopcionId;
 
-    public UsuarioDTO(Long id, String nombre, String correo, String contraseña, String razones, Long citaId, SolicitudAdopcionDTO solicitudAdopcionId) {
+   
+
+    public UsuarioDTO() {
+    }
+
+    public UsuarioDTO(Long id, String nombre, String correo, String contraseña, String razones, String identificador, Long citaId, SolicitudAdopcionDTO solicitudAdopcionId) {
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         this.contraseña = contraseña;
         this.razones = razones;
+        this.identificador = identificador;
         this.citaId = citaId;
         this.solicitudAdopcionId = solicitudAdopcionId;
     }
 
-    public UsuarioDTO() {
+    public String getIdentificador() {
+        return identificador;
     }
 
+    public void setIdentificador(String identificador) {
+        this.identificador = identificador;
+    }
+    
     public Long getId() {
         return id;
     }
