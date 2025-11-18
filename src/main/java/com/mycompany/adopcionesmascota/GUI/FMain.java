@@ -57,9 +57,7 @@ public class FMain extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(33, 110, 33));
         jLabel1.setText("LA VIDA ES BELLA");
 
-        btn_inicio.setBackground(new java.awt.Color(255, 255, 255));
         btn_inicio.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btn_inicio.setForeground(new java.awt.Color(0, 0, 0));
         btn_inicio.setText("Inicio");
         btn_inicio.setBorder(null);
         btn_inicio.setBorderPainted(false);
@@ -70,9 +68,7 @@ public class FMain extends javax.swing.JFrame {
             }
         });
 
-        btn_solicitudes.setBackground(new java.awt.Color(255, 255, 255));
         btn_solicitudes.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btn_solicitudes.setForeground(new java.awt.Color(0, 0, 0));
         btn_solicitudes.setText("Mis Solicitudes");
         btn_solicitudes.setBorder(null);
         btn_solicitudes.setBorderPainted(false);
@@ -83,9 +79,7 @@ public class FMain extends javax.swing.JFrame {
             }
         });
 
-        btn_contacto.setBackground(new java.awt.Color(255, 255, 255));
         btn_contacto.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btn_contacto.setForeground(new java.awt.Color(0, 0, 0));
         btn_contacto.setText("Contacto");
         btn_contacto.setBorder(null);
         btn_contacto.setBorderPainted(false);
@@ -148,9 +142,9 @@ public class FMain extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(panelCabecera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
                 .addComponent(panelContenidoDinamico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
 
         pack();

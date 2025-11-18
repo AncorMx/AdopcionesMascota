@@ -16,14 +16,16 @@ public class UsuarioDTO {
     private Long id;
     private String nombre;
     private String correo;
+    private String contraseña;
     private String razones;
     private Long citaId;
     private SolicitudAdopcionDTO solicitudAdopcionId;
 
-    public UsuarioDTO(Long id, String nombre, String correo, String razones, Set<MascotaDTO> listaMascotas, Long citaId, SolicitudAdopcionDTO solicitudAdopcionId) {
+    public UsuarioDTO(Long id, String nombre, String correo, String contraseña, String razones, Long citaId, SolicitudAdopcionDTO solicitudAdopcionId) {
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
+        this.contraseña = contraseña;
         this.razones = razones;
         this.citaId = citaId;
         this.solicitudAdopcionId = solicitudAdopcionId;
@@ -46,6 +48,14 @@ public class UsuarioDTO {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 
     public String getCorreo() {

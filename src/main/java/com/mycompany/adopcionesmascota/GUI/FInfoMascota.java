@@ -46,39 +46,30 @@ public class FInfoMascota extends javax.swing.JPanel {
 
         lblMascota.setBackground(new java.awt.Color(0, 0, 0));
         lblMascota.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        lblMascota.setForeground(new java.awt.Color(0, 0, 0));
         lblMascota.setText("NOMBRE MASCOTA");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Detalles");
 
         lblDetalles.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDetalles.setForeground(new java.awt.Color(0, 0, 0));
         lblDetalles.setText("DETALLES DE LA MASCOTA");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Temperamento");
 
         lblTemperamento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblTemperamento.setForeground(new java.awt.Color(0, 0, 0));
         lblTemperamento.setText("TEMPERAMENTO DE LA MASCOTA");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Estatus Médico");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("ESTATUS MEDICO DE LA MASCOTA");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Requisitos del Hogar ");
 
         lblRequisitos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblRequisitos.setForeground(new java.awt.Color(0, 0, 0));
         lblRequisitos.setText("REQUISITOS DEL HOGAR PARA LA MASCOTA");
 
         jButton1.setBackground(new java.awt.Color(33, 110, 33));
@@ -149,7 +140,6 @@ public class FInfoMascota extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(255, 244, 225));
 
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("IMAGEN MASCOTA");
         jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -157,21 +147,17 @@ public class FInfoMascota extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 507, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(88, 88, 88)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(89, Short.MAX_VALUE)))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 408, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(39, 39, 39)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(39, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(43, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
