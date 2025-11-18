@@ -20,7 +20,6 @@ public class PetCardPanel extends javax.swing.JPanel {
      */
     public PetCardPanel() {
         initComponents(); 
-       
     }
 
     public PetCardPanel(Mascota mascota, FMain mainFrame) {
@@ -28,6 +27,9 @@ public class PetCardPanel extends javax.swing.JPanel {
 
         this.mascota = mascota;
         this.mainFrame = mainFrame;
+        
+            System.out.println("PetCardPanel ctor - mascota=" + mascota + " mainFrame=" + mainFrame);
+
 
         lbNombreMascota.setText(this.mascota.getNombre());
         btn_infoMascota.setText("Ver Detalles");
