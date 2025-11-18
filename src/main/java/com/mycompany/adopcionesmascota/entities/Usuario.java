@@ -4,7 +4,6 @@
  */
 package com.mycompany.adopcionesmascota.entities;
 
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,13 +22,13 @@ import java.util.Set;
 @Entity
 public class Usuario implements Serializable {
 
-    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nombre;
     private String correo;
     private String razones;
+    private String contraseña;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cita_id", referencedColumnName = "id")
     private Cita citaId;
@@ -40,17 +39,22 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(Long id, String nombre, String correo, String razones, Cita citaId, SolicitudAdopcion solicitudAdopcion) {
+    public Usuario(Long id, String nombre, String correo, String razones, String contraseña, Cita citaId, SolicitudAdopcion solicitudAdopcion) {
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         this.razones = razones;
+        this.contraseña = contraseña;
         this.citaId = citaId;
         this.solicitudAdopcion = solicitudAdopcion;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 
     public Long getId() {
@@ -101,6 +105,4 @@ public class Usuario implements Serializable {
         this.solicitudAdopcion = solicitudAdopcion;
     }
 
-   
-    
 }
