@@ -9,7 +9,7 @@ package com.mycompany.adopcionesmascota.GUI;
  * @author angel
  */
 public class JPContacto extends javax.swing.JPanel {
-
+    
     /**
      * Creates new form JPMenuMostrarEspecies
      */
@@ -30,7 +30,6 @@ public class JPContacto extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 244, 225));
 
@@ -46,10 +45,6 @@ public class JPContacto extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel4.setText("Contacto:");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Instagram-Logo.png"))); // NOI18N
-        jLabel5.setText("@LaVidaEsBella");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -57,7 +52,6 @@ public class JPContacto extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(447, 447, 447)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
                     .addComponent(jLabel4)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel3)
@@ -76,9 +70,7 @@ public class JPContacto extends javax.swing.JPanel {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
-                .addGap(33, 33, 33)
-                .addComponent(jLabel5)
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addContainerGap(219, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -88,6 +80,5 @@ public class JPContacto extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }

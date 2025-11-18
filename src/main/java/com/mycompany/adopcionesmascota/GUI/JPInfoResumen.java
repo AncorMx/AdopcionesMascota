@@ -50,7 +50,6 @@ public class JPInfoResumen extends javax.swing.JPanel {
         btnEnviarSolicitud = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 244, 225));
 
@@ -94,47 +93,33 @@ public class JPInfoResumen extends javax.swing.JPanel {
         );
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Datos del Solicitante");
 
-        lblNombreSolicitante.setForeground(new java.awt.Color(0, 0, 0));
         lblNombreSolicitante.setText("NOMBRE DEL SOLICITANTE");
 
-        lblCURP.setForeground(new java.awt.Color(0, 0, 0));
         lblCURP.setText("CURP ");
 
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("CURP:");
 
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Nombre:");
 
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Cita Preferida:");
 
-        lblCitaPref.setForeground(new java.awt.Color(0, 0, 0));
         lblCitaPref.setText("CITA PREFERIDA");
 
-        lblContacto.setForeground(new java.awt.Color(0, 0, 0));
         lblContacto.setText("CONTACTO");
 
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Contacto:");
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Condiciones del Hogar");
 
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Tipo Vivienda:");
 
-        lblTipoVivienda.setForeground(new java.awt.Color(0, 0, 0));
         lblTipoVivienda.setText("TIPO DE VIVIENDA");
 
-        lblConvivencia.setForeground(new java.awt.Color(0, 0, 0));
         lblConvivencia.setText("DESC CONVIVENCIA");
 
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Convivencia:");
 
         jCheckBox1.setText("Confirmo que toda la información es verídica y acepto la carte de compromiso de adopción");
@@ -145,7 +130,6 @@ public class JPInfoResumen extends javax.swing.JPanel {
         btnEnviarSolicitud.setText("Enviar Solicitud");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Paso 4: Resumen y Confirmacion");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -244,20 +228,12 @@ public class JPInfoResumen extends javax.swing.JPanel {
         );
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Solicitud de Adopciones");
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/4.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(284, 284, 284)
-                .addComponent(jLabel1)
-                .addContainerGap(274, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,9 +248,7 @@ public class JPInfoResumen extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jLabel2)
-                .addGap(12, 12, 12)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -285,7 +259,6 @@ public class JPInfoResumen extends javax.swing.JPanel {
     private javax.swing.JButton btnAnterior;
     private javax.swing.JButton btnEnviarSolicitud;
     private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;

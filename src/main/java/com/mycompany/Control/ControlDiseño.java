@@ -167,7 +167,7 @@ public class ControlDiseño {
                 showInternalPanel(ViewNames.PASO_1_PERSONAL);
                 break;
             case ViewNames.PASO_1_PERSONAL:
-                goToInfoMascota(); // Retorna a la pantalla de Info Mascota
+                goToMainCatalog(); // <-- FIX: Retorna al Catálogo principal
                 break;
             default:
                 goToMainCatalog();

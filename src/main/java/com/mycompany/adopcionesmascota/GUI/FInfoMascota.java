@@ -14,10 +14,24 @@ import com.mycompany.adopcionesmascota.entities.Mascota;
 public class FInfoMascota extends javax.swing.JPanel {
 
     ControlDiseño controlDiseño;
+    private Mascota mascota;
 
-    public FInfoMascota(Mascota mascota) {
-
+    public FInfoMascota(Mascota mascota, ControlDiseño controlDiseño) {
         this.controlDiseño = controlDiseño;
+        this.mascota = mascota;
+        initComponents();
+    }
+
+    // Constructor 2: SE AGREGÓ PARA COMPATIBILIDAD CON EL REGISTRO (ControlDiseño.createAndRegisterPanel).
+    // Esto resuelve el error de "ControlDiseño es null".
+    public FInfoMascota(ControlDiseño controlDiseño) {
+        this.controlDiseño = controlDiseño;
+        initComponents();
+        // Nota: La mascota permanece null en esta instancia de registro.
+    }
+
+    // Constructor 3: (Sin argumentos) Usado por el diseñador de GUI.
+    public FInfoMascota() {
         initComponents();
     }
 
@@ -190,7 +204,11 @@ public class FInfoMascota extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        if (controlDiseño != null) {
+            controlDiseño.goToNextStep(ControlDiseño.ViewNames.INFO_MASCOTA); // Llama al siguiente paso
+        } else {
+            System.err.println("Error: ControlDiseño es null en FInfoMascota.");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

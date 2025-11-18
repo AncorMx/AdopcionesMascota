@@ -4,15 +4,22 @@
  */
 package com.mycompany.adopcionesmascota.GUI;
 
+import com.mycompany.Control.ControlDiseño;
+
 /**
  *
  * @author angel
  */
 public class JPInfoRazones extends javax.swing.JPanel {
 
-    /**
-     * Creates new form JPMenuMostrarEspecies
-     */
+    ControlDiseño controlDiseño;
+
+    public JPInfoRazones(ControlDiseño controlDiseño) { // Constructor con ControlDiseño
+        initComponents();
+        this.controlDiseño = controlDiseño;
+    }
+
+    // Constructor sin argumentos
     public JPInfoRazones() {
         initComponents();
     }
@@ -43,22 +50,18 @@ public class JPInfoRazones extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 244, 225));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Paso 3: Experiencias y Antecedentes");
 
         tfMotivo.setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Motivo de adopción");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Antecedentes de Mascotas");
 
         tfAntecedentes.setBackground(new java.awt.Color(204, 204, 204));
 
-        cbAceptarCondiciones.setForeground(new java.awt.Color(0, 0, 0));
         cbAceptarCondiciones.setText("Acepto las condiciones de seguimiento post-adopción del refugio");
         cbAceptarCondiciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +78,11 @@ public class JPInfoRazones extends javax.swing.JPanel {
 
         btnSiguiente.setBackground(new java.awt.Color(0, 102, 0));
         btnSiguiente.setText("Siguiente");
+        btnSiguiente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSiguienteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -123,7 +131,6 @@ public class JPInfoRazones extends javax.swing.JPanel {
         );
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Solicitud de Adopciones");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/3.png"))); // NOI18N
@@ -136,7 +143,7 @@ public class JPInfoRazones extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(284, 284, 284)
                 .addComponent(jLabel1)
-                .addContainerGap(285, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,6 +173,9 @@ public class JPInfoRazones extends javax.swing.JPanel {
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
+        controlDiseño.goToNextStep(ControlDiseño.ViewNames.PASO_3_RAZONES);    }//GEN-LAST:event_btnSiguienteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

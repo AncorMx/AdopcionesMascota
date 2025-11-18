@@ -184,7 +184,7 @@ public class FMain extends javax.swing.JFrame {
 
     public void mostrarDetalles(Mascota mascota) {
 
-        FInfoMascota panelDetalles = new FInfoMascota(mascota);
+        FInfoMascota panelDetalles = new FInfoMascota(mascota, controlDiseño);
 
         String nombreVista = "detalles_" + mascota.getId();
 
