@@ -4,17 +4,20 @@
  */
 package com.mycompany.adopcionesmascota.GUI;
 
+import com.mycompany.Control.ControlDiseño;
+
 /**
  *
  * @author Josel
  */
 public class FrmRegistro extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FrmRegistro
-     */
+    ControlDiseño controlDiseño;
+
     public FrmRegistro() {
         initComponents();
+        controlDiseño = new ControlDiseño(this);
+
     }
 
     /**
@@ -69,6 +72,11 @@ public class FrmRegistro extends javax.swing.JFrame {
         btnRegitrar.setForeground(new java.awt.Color(255, 255, 255));
         btnRegitrar.setText("Registrar");
         btnRegitrar.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        btnRegitrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegitrarActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel2.setText("Contraseña");
@@ -156,6 +164,10 @@ public class FrmRegistro extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegitrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegitrarActionPerformed
+        controlDiseño.goToLogin(this);
+    }//GEN-LAST:event_btnRegitrarActionPerformed
 
     /**
      * @param args the command line arguments

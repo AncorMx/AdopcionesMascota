@@ -4,17 +4,25 @@
  */
 package com.mycompany.adopcionesmascota.GUI;
 
+import com.mycompany.Control.ControlDiseño;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Josel
  */
 public class FrmInicoSesion extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FrmInicoSesion
-     */
+    private ControlDiseño controlDiseño;
+
     public FrmInicoSesion() {
         initComponents();
+
+        // 2. Inicializa el controlador, pasándole esta ventana.
+        controlDiseño = new ControlDiseño(this);
+      
+
     }
 
     /**
@@ -38,7 +46,7 @@ public class FrmInicoSesion extends javax.swing.JFrame {
         PanelRegistro = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        brnRegistro = new javax.swing.JButton();
+        btnRegistro = new javax.swing.JButton();
         btnIniciarS = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -100,11 +108,16 @@ public class FrmInicoSesion extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Registrate");
 
-        brnRegistro.setBackground(new java.awt.Color(160, 196, 149));
-        brnRegistro.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        brnRegistro.setForeground(new java.awt.Color(255, 255, 255));
-        brnRegistro.setText("¡AQUI!");
-        brnRegistro.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        btnRegistro.setBackground(new java.awt.Color(160, 196, 149));
+        btnRegistro.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        btnRegistro.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegistro.setText("¡AQUI!");
+        btnRegistro.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        btnRegistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistroActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelRegistroLayout = new javax.swing.GroupLayout(PanelRegistro);
         PanelRegistro.setLayout(PanelRegistroLayout);
@@ -118,7 +131,7 @@ public class FrmInicoSesion extends javax.swing.JFrame {
                         .addGap(24, 24, 24))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRegistroLayout.createSequentialGroup()
                         .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(brnRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(38, 38, 38))))
         );
@@ -130,7 +143,7 @@ public class FrmInicoSesion extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addComponent(brnRegistro)
+                .addComponent(btnRegistro)
                 .addGap(37, 37, 37))
         );
 
@@ -139,6 +152,11 @@ public class FrmInicoSesion extends javax.swing.JFrame {
         btnIniciarS.setForeground(new java.awt.Color(255, 255, 255));
         btnIniciarS.setText("Iniciar sesion");
         btnIniciarS.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        btnIniciarS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIniciarSActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelMainLayout = new javax.swing.GroupLayout(PanelMain);
         PanelMain.setLayout(PanelMainLayout);
@@ -210,17 +228,21 @@ public class FrmInicoSesion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void TfCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TfCorreoActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_TfCorreoActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btnIniciarSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSActionPerformed
+        controlDiseño.goToMain();
+    }//GEN-LAST:event_btnIniciarSActionPerformed
+
+    private void btnRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroActionPerformed
+        controlDiseño.goToRegistro();
+    }//GEN-LAST:event_btnRegistroActionPerformed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+     * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -254,8 +276,8 @@ public class FrmInicoSesion extends javax.swing.JFrame {
     private javax.swing.JPanel PanelRegistro;
     private javax.swing.JPasswordField PfContra;
     private javax.swing.JTextField TfCorreo;
-    private javax.swing.JButton brnRegistro;
     private javax.swing.JButton btnIniciarS;
+    private javax.swing.JButton btnRegistro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -4,6 +4,8 @@
  */
 package com.mycompany.adopcionesmascota.GUI;
 
+import com.mycompany.Control.ControlDiseño;
+import com.mycompany.Control.ControlDiseño.ViewNames;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -12,23 +14,46 @@ import javax.swing.JPanel;
  * @author angel
  */
 public class FMain extends javax.swing.JFrame {
+
     private JPanel panelPrincipal;
     private CardLayout cardLayout;
+    private ControlDiseño controlDiseño;
+
     /**
      * Creates new form FMain
      */
     public FMain() {
         initComponents();
+
         cardLayout = new CardLayout();
         panelContenidoDinamico.setLayout(cardLayout);
-        String vista_menu_inicial = "Mostrar_Menu";
-        JPMenuMostrarEspecies panelInicial = new JPMenuMostrarEspecies();
 
-        panelInicial.setName(vista_menu_inicial);
+        // 1. Inicializa el ControlDiseño con las referencias del contenedor
+        controlDiseño = new ControlDiseño(this, panelContenidoDinamico, cardLayout);
 
-        panelContenidoDinamico.add(panelInicial, vista_menu_inicial);
+        // 2. Llama al método simplificado del controlador para crear y registrar.
+        registerAllPanels();
 
-        cardLayout.show(panelContenidoDinamico, vista_menu_inicial);
+        // 3. Muestra el panel inicial (Catálogo)
+        controlDiseño.goToMainCatalog();
+    }
+
+    private void registerAllPanels() {
+        // La llamada a la fábrica del controlador elimina la necesidad de 'new JPMenuMostrarEspecies(controlDiseño)' aquí.
+        controlDiseño.createAndRegisterPanel(ViewNames.CATALOGO, JPMenuMostrarEspecies.class);
+        controlDiseño.createAndRegisterPanel(ViewNames.SOLICITUDES, JPSolicitudes.class);
+        controlDiseño.createAndRegisterPanel(ViewNames.CONTACTO, JPContacto.class);
+
+        // Flujo de Solicitud (Pasos)
+        controlDiseño.createAndRegisterPanel(ViewNames.INFO_MASCOTA, FInfoMascota.class);
+        controlDiseño.createAndRegisterPanel(ViewNames.PASO_1_PERSONAL, JPInfoPersonal.class);
+        controlDiseño.createAndRegisterPanel(ViewNames.PASO_2_VIVIENDA, JPInfoVivienda.class);
+        controlDiseño.createAndRegisterPanel(ViewNames.PASO_3_RAZONES, JPInfoRazones.class);
+        controlDiseño.createAndRegisterPanel(ViewNames.PASO_4_RESUMEN, JPInfoResumen.class);
+
+        // Paneles de Error
+        controlDiseño.createAndRegisterPanel(ViewNames.ERROR_CITA, msg_ErrorCitaPend.class);
+        controlDiseño.createAndRegisterPanel(ViewNames.ERROR_SOLICITUD, msg_ErrorSolicitud.class);
     }
 
     /**
@@ -151,67 +176,16 @@ public class FMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_inicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicioActionPerformed
-        String vista_menu = "Mostrar_Menu";
+        controlDiseño.goToMainCatalog();
 
-        if (panelContenidoDinamico.getComponentCount() == 0 || !isViewAdded(vista_menu)) {
-
-            JPMenuMostrarEspecies especiesPanel = new JPMenuMostrarEspecies();
-            panelContenidoDinamico.add(especiesPanel, vista_menu);
-        }
-
-        cardLayout.show(panelContenidoDinamico, vista_menu);
-    }
-
-    private boolean isViewAdded(String viewName) {
-        for (java.awt.Component comp : panelContenidoDinamico.getComponents()) {
-            if (viewName.equals(comp.getName())) {
-                return true;
-            }
-        }
-        return false;
     }//GEN-LAST:event_btn_inicioActionPerformed
 
     private void btn_solicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_solicitudesActionPerformed
-        String vista_solis = "Mostrar_Solis";
-
-        if (panelContenidoDinamico.getComponentCount() == 0 || !isViewAdded(vista_solis)) {
-
-            JPSolicitudes solicitudes = new JPSolicitudes();
-            panelContenidoDinamico.add(solicitudes, vista_solis);
-        }
-
-        cardLayout.show(panelContenidoDinamico, vista_solis);
-    }
-
-    private boolean verSolis(String vista_solis) {
-        for (java.awt.Component comp : panelContenidoDinamico.getComponents()) {
-            if (vista_solis.equals(comp.getName())) {
-                return true;
-            }
-        }
-        return false;
+        controlDiseño.goToSolicitudes();
     }//GEN-LAST:event_btn_solicitudesActionPerformed
 
     private void btn_contactoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_contactoActionPerformed
-        final String vista_contacto = "Mostrar_Contacto";
-
-        boolean viewExists = false;
-        for (java.awt.Component comp : panelContenidoDinamico.getComponents()) {
-            if (vista_contacto.equals(comp.getName())) {
-                viewExists = true;
-                break;
-            }
-        }
-
-        if (!viewExists) {
-            JPContacto contactoPanel = new JPContacto();
-
-            contactoPanel.setName(vista_contacto);
-
-            panelContenidoDinamico.add(contactoPanel, vista_contacto);
-        }
-
-        cardLayout.show(panelContenidoDinamico, vista_contacto);
+        controlDiseño.goToContacto();
     }//GEN-LAST:event_btn_contactoActionPerformed
 
     /**
