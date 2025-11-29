@@ -7,6 +7,15 @@ package com.mycompany.adopcionesmascota.Presentacion.Comun;
 import com.mycompany.Control.ControlDiseño;
 import com.mycompany.Control.ControlDiseño.ViewNames;
 import com.mycompany.adopcionesmascota.Negocio.ObjetosNegocio.Entidades.Mascota;
+import com.mycompany.adopcionesmascota.Presentacion.GenerarCita.JPInfoPersonal;
+import com.mycompany.adopcionesmascota.Presentacion.GenerarCita.JPInfoRazones;
+import com.mycompany.adopcionesmascota.Presentacion.GenerarCita.JPInfoResumen;
+import com.mycompany.adopcionesmascota.Presentacion.GenerarCita.JPInfoVivienda;
+import com.mycompany.adopcionesmascota.Presentacion.GenerarCita.msg_ErrorCitaPend;
+import com.mycompany.adopcionesmascota.Presentacion.InfoMascota.FInfoMascota;
+import com.mycompany.adopcionesmascota.Presentacion.InfoMascota.JPMenuMostrarEspecies;
+import com.mycompany.adopcionesmascota.Presentacion.RealizarAdopcion.JPSolicitudes;
+import com.mycompany.adopcionesmascota.Presentacion.RealizarAdopcion.msg_ErrorSolicitud;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
